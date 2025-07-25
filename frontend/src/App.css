@@ -1,0 +1,106 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header & Footer */
+.app-header,
+.app-footer {
+  background: #20232a;
+  color: #ffffff;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+/* Main editor + output layout */
+.main-split {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Panels styling */
+.editor-pane,
+.output-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.editor-pane {
+  flex: 7;
+  background: #2a2d33;
+  border-right: 1px solid #343a40;
+}
+
+.output-pane {
+  flex: 5;
+  background: #181c23;
+}
+
+/* Titles */
+.section-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.run-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #129358;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.run-button:hover {
+  background: #16b86a;
+}
+
+.status-bar {
+  padding: 10px 12px;
+  background: #21242d;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.output-console {
+  flex: 1;
+  padding: 14px;
+  background: #15181c;
+  color: #00ff88;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  font-size: 0.95rem;
+}
