@@ -14,7 +14,7 @@ A sleek and modern web-based Verilog playground. Write, compile, and debug Veril
 - **Frontend:** React + Monaco Editor
 - **Backend:** Python (Flask)
 - **Compiler:** [Icarus Verilog (iverilog)](http://iverilog.icarus.com/)
-- **AI Assistant:** OpenRouter API with Mistral LLM
+- **AI Assistant:** OpenRouter API with Mistral LLM - PUT YOURS IN THE CODE
 
 ---
 
