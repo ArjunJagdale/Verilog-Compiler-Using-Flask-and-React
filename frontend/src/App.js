@@ -74,7 +74,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`
+          Authorization: `Bearer sk-##`
         },
         body: JSON.stringify({
           model: "mistralai/mistral-small-3.2-24b-instruct:free",
