@@ -1,10 +1,9 @@
-/* App.css */
-
 body {
   margin: 0;
   padding: 0;
   background: #1e1e1e;
   font-family: 'Fira Mono', 'Consolas', monospace;
+  color: #f0f0f0;
 }
 
 .app-container {
@@ -29,35 +28,58 @@ body {
   color: #aaaaaa;
 }
 
-/* Main editor + output layout */
+/* Main layout */
 .main-split {
   display: flex;
   flex: 1;
   min-height: 0;
+  overflow: hidden;
 }
 
 /* Panels styling */
 .editor-pane,
-.output-pane {
+.output-pane,
+.ai-pane {
   display: flex;
   flex-direction: column;
   min-width: 0;
   padding: 20px;
   box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
 }
 
 .editor-pane {
-  flex: 7;
   background: #2a2d33;
   border-right: 1px solid #343a40;
 }
 
 .output-pane {
-  flex: 5;
   background: #181c23;
+  border-right: 1px solid #343a40;
 }
 
-/* Titles */
+.ai-pane {
+  background: #0f1117;
+  color: #e9e9e9;
+}
+
+/* Resizers */
+.resizer,
+.resizer-ai {
+  width: 5px;
+  cursor: col-resize;
+  background-color: #333;
+  position: relative;
+  z-index: 10;
+}
+
+.resizer:hover,
+.resizer-ai:hover {
+  background-color: #555;
+}
+
+/* Section Titles */
 .section-title {
   font-size: 1.05rem;
   font-weight: bold;
@@ -65,7 +87,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Button styling */
+/* Run Button */
 .run-button {
   margin-top: 16px;
   padding: 10px 20px;
@@ -84,6 +106,7 @@ body {
   background: #16b86a;
 }
 
+/* Status + Output */
 .status-bar {
   padding: 10px 12px;
   background: #21242d;
@@ -103,4 +126,30 @@ body {
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
   overflow: auto;
   font-size: 0.95rem;
+}
+
+/* AI Debugger Styles */
+.ai-console {
+  flex: 1;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  padding: 14px;
+  border-radius: 5px;
+  overflow: auto;
+  line-height: 1.5;
+  background-color: #111319;
+  color: #e9e9e9;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.ai-console strong {
+  color: #ffdd57;
+}
+
+.ai-console code {
+  background-color: #1d1f27;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #80ffea;
 }
